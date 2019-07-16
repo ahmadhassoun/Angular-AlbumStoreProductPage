@@ -14,6 +14,6 @@ export class ProductService {
    * @param id
    */
   getAlbum(id: number): Observable<Album> {
-    return this._http.get(this._albumUrl).map((response) => response.json() as Album);
+    return this._http.get(this._albumUrl).map((response) => <Album>response.json());
   }
 }
